@@ -27,7 +27,7 @@ jobs:
       run: jar -cfe executable.jar Main out/*.class
 
     - name: Run JAR
-      run: java -jar out/executable.jar
+      run: java -jar executable.jar
 
     - name: Save artifact
       run: upload-artifact
