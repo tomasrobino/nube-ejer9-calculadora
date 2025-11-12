@@ -21,6 +21,5 @@ jobs:
       run: javac -d out src/*.java
 
     - name: Run tests
-      run: |
-        echo < ls
-        java /out/CalculadoraTest
+      run: java -cp out CalculadoraTest
+        
