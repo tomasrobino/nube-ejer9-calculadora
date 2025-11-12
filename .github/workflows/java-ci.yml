@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  unit-test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout  
@@ -25,3 +25,9 @@ jobs:
     
     - name: Create JAR
       run: jar -cfe executable.jar Main out/*.class
+
+    - name: Run JAR
+      run: java -jar out/executable.jar
+
+    - name: Save artifact
+      run: upload-artifact
