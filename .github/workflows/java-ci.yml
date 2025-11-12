@@ -24,7 +24,7 @@ jobs:
       run: java -cp out CalculadoraTest
     
     - name: Create JAR
-      run: jar -cfe executable.jar Main -C out
+      run: jar -cfe executable.jar Main -C out .
 
     - name: Run JAR
       run: java -jar executable.jar
